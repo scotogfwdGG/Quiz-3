@@ -1,0 +1,120 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Admin",
+      "email": "admin@nutristore.com",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "5cb4",
+      "nombre": "Stevens",
+      "email": "stevens@gmail.com",
+      "password": "12345",
+      "role": "cliente"
+    },
+    {
+      "id": "8898",
+      "nombre": "Amir",
+      "email": "amir@gmail.com",
+      "password": "12345",
+      "role": "cliente"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "imagen": "/img/creatina_monohidratada_classic.png",
+      "nombre": "Creatina Monohidratada Classic",
+      "descripcion": "Creatina 100% pura, ideal para aumentar la fuerza y la resistencia.",
+      "precio": 30
+    },
+    {
+      "id": "2",
+      "imagen": "/img/creatina_calidad_plus.png",
+      "nombre": "Creatina Calidad+",
+      "descripcion": "Creatina con sello Creapure, máxima pureza garantizada.",
+      "precio": 42
+    },
+    {
+      "id": "3",
+      "imagen": "/img/proteina_premium.png",
+      "nombre": "Proteína Premium",
+      "descripcion": "Ideal para aumentar masa muscular y recuperación óptima.",
+      "precio": 55
+    },
+    {
+      "id": "4",
+      "imagen": "/img/proteina_plus.png",
+      "nombre": "Proteína Plus",
+      "descripcion": "Ideal para aumentar masa muscular y recuperación óptima.",
+      "precio": 70
+    },
+    {
+      "id": "5",
+      "imagen": "/img/preentreno_venom.png",
+      "nombre": "Preentreno Venom",
+      "descripcion": "Preentreno con cafeína, ideal para aumentar la energía y el rendimiento.",
+      "precio": 45
+    },
+    {
+      "id": "6",
+      "imagen": "/img/preentreno_psicodelico.png",
+      "nombre": "Preentreno Psico",
+      "descripcion": "Preentreno con cafeína, ideal para aumentar la energía y el rendimiento.",
+      "precio": 65
+    }
+  ],
+  "siteData": {
+    "title": "Calistenia's Piyis",
+    "subtitle": "EL TEMPLO DEL PESO CORPORAL",
+    "heroMessage": "La calistenia es la disciplina definitiva. Entrena tu cuerpo y tu mente usando solo tu propio peso como resistencia.",
+    "footerText": "2026 CALISTENIA'S PIYIS - NO PAIN NO GAIN"
+  },
+  "rutinas": [
+    {
+      "id": "1",
+      "titulo": "BLOQUE DE EMPUJE (PUSH)",
+      "descripcion": "Maximiza tu fuerza en pecho y hombros con control corporal.",
+      "video": "https://www.youtube.com/embed/HT_IEbQG76k",
+      "nivel": "Intermedio"
+    },
+    {
+      "id": "2",
+      "titulo": "DOMINIO DE TRACCIÓN (PULL)",
+      "descripcion": "Construye una espalda de acero. El tirón es vida.",
+      "video": "https://www.youtube.com/embed/L0Q5G7AMUQo",
+      "nivel": "Avanzado"
+    },
+    {
+      "id": "3",
+      "titulo": "PILAR DE PIERNA (LEGS)",
+      "descripcion": "La base de todo atleta. Potencia explosiva.",
+      "video": "https://www.youtube.com/embed/8SJ2Z2y6EaA",
+      "nivel": "Principiante"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "1",
+      "userId": "2",
+      "productos": [
+        "Creatina Monohidratada Classic"
+      ],
+      "total": 30,
+      "estado": "Pendiente",
+      "fecha": "2024-03-20"
+    }
+  ],
+  "progresoRutinas": [
+    {
+      "id": "1",
+      "userId": "2",
+      "rutinaId": "1",
+      "progreso": 45,
+      "completado": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

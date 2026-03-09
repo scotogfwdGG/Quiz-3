@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&family=Syncopate:wght@400;700&display=swap');
+
+:root {
+  --primary: #ff3e3e;
+  --secondary: #ff8c3e;
+  --accent: #ff0055;
+  --bg-body: #0a0a0b;
+  --bg-surface: #121214;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --text-main: #f8f8f2;
+  --text-dim: #9494a5;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent-gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  --motion-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-glow: 0 0 20px rgba(255, 62, 62, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Background Atmosphere */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 62, 62, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 140, 62, 0.05) 0%, transparent 40%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+/* Base Styles for Reusable Components */
+.sporty-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: white;
+  padding: 12px 16px;
+  font-family: 'Outfit', sans-serif;
+  transition: var(--motion-fast);
+}
+
+.sporty-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(255, 62, 62, 0.1);
+}
+
+.btn-add,
+.btn-submit,
+.btn-register {
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 14px 28px;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: var(--motion-fast);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-add:hover,
+.btn-submit:hover,
+.btn-register:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 5px 25px rgba(255, 62, 62, 0.4);
+}
+
+.btn-add:active,
+.btn-submit:active,
+.btn-register:active {
+  transform: translateY(0);
+}
+
+/* Glass Card Pattern */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Global Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp var(--motion-slow) forwards;
+}
+
+.moving-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.moving-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-gradient);
+  animation: scan-horizontal 4s var(--motion-slow) infinite;
+}
+
+@keyframes scan-horizontal {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Animations for Grid Items */
+.grid-item-appear {
+  opacity: 0;
+  animation: fadeInUp var(--motion-slow) forwards;
+}
+
+.grid-item-appear:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.grid-item-appear:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.grid-item-appear:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.grid-item-appear:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.grid-item-appear:nth-child(6) {
+  animation-delay: 0.5s;
+}

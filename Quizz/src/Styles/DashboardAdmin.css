@@ -1,0 +1,80 @@
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    min-height: 90vh;
+}
+
+.sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.sidebar-nav button {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 1.2rem;
+    color: var(--text-dim);
+    border-left: 3px solid transparent;
+    transition: var(--motion-fast);
+}
+
+.sidebar-nav button.active {
+    background: var(--glass);
+    color: var(--primary);
+    border-left-color: var(--primary);
+}
+
+.btn-logout {
+    margin-top: auto;
+    background: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+}
+
+.dashboard-main {
+    padding: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--border);
+}
+
+.dashboard-main h1 {
+    color: var(--primary);
+}
+
+.dashboard-main p {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.stat-card.moving-border:nth-child(2) .stat-value {
+    color: var(--secondary);
+}

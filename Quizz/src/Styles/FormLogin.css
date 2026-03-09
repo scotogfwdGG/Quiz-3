@@ -1,0 +1,212 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: radial-gradient(circle at top right, rgba(0, 242, 255, 0.05), transparent),
+        radial-gradient(circle at bottom left, rgba(212, 255, 0, 0.05), transparent);
+}
+
+.btn-back-home {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--motion-fast);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.btn-back-home .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-back-home:hover {
+    color: var(--secondary);
+}
+
+.btn-back-home:hover .arrow {
+    transform: translateX(-5px);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(18, 18, 20, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 4px;
+    /* Sporty sharp edges */
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(212, 255, 0, 0.1);
+    color: var(--primary);
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.form-header h1 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.form-header .highlight {
+    color: var(--secondary);
+}
+
+.form-header p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.sporty-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 12px 0;
+    color: #fff;
+    font-size: 1.1rem;
+    outline: none;
+    border-bottom: 1px solid var(--border);
+}
+
+.input-line {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    transition: width 0.4s ease;
+}
+
+.sporty-input:focus+.input-line {
+    width: 100%;
+}
+
+.btn-submit {
+    position: relative;
+    width: 100%;
+    background: var(--accent-gradient);
+    color: #000;
+    padding: 18px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+    box-shadow: 0 10px 40px rgba(0, 242, 255, 0.4);
+}
+
+.btn-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.6s, height 0.6s, opacity 0.6s;
+}
+
+.btn-submit:active .btn-glow {
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+}
+
+.form-footer {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.form-footer p {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.link-highlight {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 5px;
+    position: relative;
+}
+
+.link-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.link-highlight:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .btn-back-home {
+        top: 20px;
+        left: 20px;
+    }
+}

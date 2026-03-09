@@ -65,7 +65,7 @@ function FormCompra() {
 
                     <div className="input-group">
                         <label>Código Postal</label>
-                        <input type="number" name="codigoPostal" value={formData.codigoPostal} onChange={handleChange} placeholder="CP" required />
+                        <input type="text" name="codigoPostal" value={formData.codigoPostal} onChange={handleChange} placeholder="CP" maxLength={5} minLength={3} required />
                     </div>
 
                     <div className="input-group">
@@ -80,17 +80,17 @@ function FormCompra() {
 
                     <div className="input-group">
                         <label>Número de Tarjeta</label>
-                        <input type="number" name="numeroTarjeta" value={formData.numeroTarjeta} onChange={handleChange} placeholder="•••• •••• •••• ••••" required />
+                        <input type="text" name="numeroTarjeta" value={formData.numeroTarjeta} onChange={handleChange} maxLength={16} minLength={16} placeholder="•••• •••• •••• ••••" required />
                     </div>
 
                     <div className="input-group">
                         <label>Fecha de Expiración</label>
-                        <input type="number" name="fechaExpiracion" value={formData.fechaExpiracion} onChange={handleChange} placeholder="MM/AA" required />
+                        <input type="text" name="fechaExpiracion" value={formData.fechaExpiracion} onChange={handleChange} placeholder="MM/AA" required />
                     </div>
 
                     <div className="input-group">
                         <label>CVV</label>
-                        <input type="number" name="cvv" value={formData.cvv} onChange={handleChange} placeholder="•••" required />
+                        <input type="text" name="cvv" value={formData.cvv} onChange={handleChange} placeholder="•••" maxLength={3} minLength={3} required />
                     </div>
 
                     <button type="submit">CONFIRMAR COMPRA</button>
